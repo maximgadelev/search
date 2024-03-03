@@ -16,7 +16,7 @@ with open(index_file_path, "w", encoding="utf-8") as index_file:
         try:
             response = requests.get(url)
             response.raise_for_status()
-            file_path = os.path.join(output_dir, f"выкачка_{i}.html")
+            file_path = os.path.join(output_dir, f"vikachka_{i}.html")
             with open(file_path, "w", encoding="utf-8") as file:
                 file.write(response.text)
             index_file.write(f"{i}: {url}\n")
